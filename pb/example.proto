@@ -1,0 +1,18 @@
+// /home/stransy/gRPC-learning/pb/example.proto
+syntax = "proto3";
+
+package pb;
+
+option go_package = "github.com/Stransyyy/gRPC-learning/pb";
+
+service ExampleService {
+  rpc SayHello (HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloResponse {
+  string greeting = 1;
+}
